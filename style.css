@@ -1,0 +1,98 @@
+/* Reset default styles */
+body, h1, p, button {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to bottom, #444, #333);
+}
+
+h1 {
+  text-align: center;
+  color: #eee;
+  margin-top: 50px;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #666;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#input-text {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+#submit-button {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+#chat-container {
+  width: 70%; /* Adjust the width as needed */
+  max-height: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: linear-gradient(to bottom, #444, #333),
+              repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05) 10px, transparent 10px, transparent 20px);
+  background-size: 100% 30px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  overflow-y: auto;
+}
+
+.chat-bubble {
+  background-color: #555;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.chat-bubble.user {
+  background-color: #666;
+}
+
+#chat-container p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  input[type="text"] {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  button#submit-button {
+    max-width: none;
+  }
+}
